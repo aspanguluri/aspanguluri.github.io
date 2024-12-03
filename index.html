@@ -9964,22 +9964,11 @@ a.anchor-link {
 <li>Average Rating (this is the label we are trying to predict, so we drop it from the training set)</li>
 <li>ISBN</li>
 <li>ISBN13</li>
-</ul>
-<p>The following discrete columns have been label encoded, so we drop the text columns (one-hot encoding would not be suitable given the large size of the inputs, so label encoding was used instead):</p>
-<ul>
 <li>Authors</li>
-<li>Language Code</li>
 <li>Publisher</li>
 </ul>
-<p>The following discrete column was broken up into three continuous columns to allow for regression:</p>
-<ul>
-<li>Publication Date (separated into the columns Day, Month, and Year)</li>
-</ul>
-<p>The following columns were dropped for being deemed irrelevant given the timescale present in the dataset (as according to the Curse of Dimensionality, we want to remove unecessary dimensions wherever possible to reduce sparcity of data):</p>
-<ul>
-<li>Month</li>
-<li>Day</li>
-</ul>
+<p>The language_code column has been one-hot encoded, so those columns have been added.</p>
+<p>The column publication_date has been transformed into unix timestamps, to linearize them.</p>
 </div>
 </div>
 </div>
@@ -10243,9 +10232,8 @@ Test Loss: 0.11216076313910013
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="6.-Visualization">6. Visualization<a class="anchor-link" href="#6.-Visualization">¶</a></h1><p>We claim that there is no error with our model, but rather that the very low $R^2$ can be explained by the lack of correlation between our predictor variables and the rating. Experimenting with different combinations of the predictor variables, such as omitting some of the predictor variables to avoid the curse of dimensionality, yield a similar $R^2$ of less than 2%.</p>
-<p>We'll show that there genuinely is very little connection between the data by using Seaborn to display a heatmap.</p>
-<p>First, we need to determine the correlation for our predictor variables and our target variable. We can do this by creating a correlation matrix, and then focusing on the last column, which stores the correlations between the average rating and our predictors.</p>
+<h1 id="6.-Visualization">6. Visualization<a class="anchor-link" href="#6.-Visualization">¶</a></h1><p>We claim that there is no error with our model, but rather that the very low $R^2$ can be explained by the lack of correlation between our predictor variables and the rating. Experimenting with different combinations of the predictor variables, such as omitting some of the predictor variables to avoid the curse of dimensionality, yield a similarly low $R^2$.</p>
+<p>We'll show that there genuinely is very little connection between the data by graphing different features against the average rating.</p>
 </div>
 </div>
 </div>
