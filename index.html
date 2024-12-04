@@ -8183,7 +8183,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The datatypes are in a mix of strings and integers. Since we wish to perform linear regression on this data (which will be explained later), we will need to transform all the string data into numerical data. This can be accomplished through label encoding, which will be done later.</p>
+<p>The datatypes are in a mix of strings and integers. Since we wish to use a neural network on this data (which will be explained later), we will need to transform all the string data into numerical data. This can be accomplished through label encoding, which will be done later.</p>
 </div>
 </div>
 </div>
@@ -8534,7 +8534,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In order to apply linear regression to the dataset, the columns we want to analyze have to be numerical. Some of the columns are in string or date form, which will not work.</p>
+<p>In order to use a neural network for the dataset, the columns we want to analyze have to be numerical. Some of the columns are in string or date form, which will not work.</p>
 <p>So, these must be encoded.</p>
 <p>First off, we can convert the publication date into a unix time value to turn it into a number.</p>
 </div>
@@ -10133,7 +10133,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We now evaluate the loss of the model using Mean Squared Error (MSE) as the loss function:</p>
+<p>We now evaluate the performance of the model using Mean Squared Error (MSE) as the loss function:</p>
 </div>
 </div>
 </div>
@@ -10228,7 +10228,7 @@ Test Loss: 0.11216076313910013
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Clearly the coefficient of determination ${R^2}$ is very low, meaning that a very small percentage of the variance in the model can be attributed to the regression produced by the neural network. So there is almost no linear relationship between the average rating and the other columns in the dataset.</p>
+<p>Clearly the coefficient of determination ${R^2}$ is very low, meaning that a very small percentage of the variance in the model can be attributed to the regression produced by the neural network. So there is almost no relationship between the average rating and the other columns in the dataset.</p>
 </div>
 </div>
 </div>
